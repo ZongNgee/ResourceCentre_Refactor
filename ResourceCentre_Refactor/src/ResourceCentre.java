@@ -139,19 +139,15 @@ public class ResourceCentre {
 
 		for (int i = 0; i < camcorderList.size(); i++) {
 
-<<<<<<< HEAD
 			output += String.format("%-84s \n",camcorderList.get(i).toString());
-=======
-<<<<<<< HEAD
+
 			output += String.format("%-84s \n", camcorderList.get(i).toString());
-=======
+
 			boolean getAvailability = camcorderList.get(i).getIsAvailable();
 			output += String.format("%-10s %-30s %-10s %-10s %-20d\n", camcorderList.get(i).getAssetTag(),
 					camcorderList.get(i).getDescription(), 
 					ResourceCentre.showAvailability(getAvailability),
 					camcorderList.get(i).getDueDate(),camcorderList.get(i).getOpticalZoom());
->>>>>>> branch 'master' of https://github.com/ZongNgee/ResourceCentre_Refactor.git
->>>>>>> branch 'master' of https://github.com/ZongNgee/ResourceCentre_Refactor
 		}
 		return output;
 	}

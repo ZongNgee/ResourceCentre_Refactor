@@ -3,6 +3,11 @@ import java.util.ArrayList;
 public class ResourceCentre {
 
 
+	private static final int OPTION_5 = 5;
+	private static final int OPTION_4 = 4;
+	private static final int OPTION_3 = 3;
+	private static final int OPTION_2 = 2;
+	private static final int OPTION_1 = 1;
 	private static final int OPTION_QUIT = 5;
 	public static void main(String[] args) {
 
@@ -21,12 +26,12 @@ public class ResourceCentre {
 			ResourceCentre.menu();
 			option = Helper.readInt("Enter an option > ");
 
-			if (option == 1) {
+			if (option == OPTION_1) {
 				// View all items
 				ResourceCentre.viewAllCamcorder(camcorderList);
 				ResourceCentre.viewAllChromebook(chromebookList);
 
-			} else if (option == 2) {
+			} else if (option == OPTION_2) {
 				// Add a new item
 				ResourceCentre.setHeader("ADD");			
 				ResourceCentre.setHeader("ITEM TYPES");
@@ -52,7 +57,7 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
-			} else if (option == 3) {
+			} else if (option == OPTION_3) {
 				// Loan item
 				ResourceCentre.setHeader("LOAN");			
 				ResourceCentre.setHeader("ITEM TYPES");
@@ -71,7 +76,7 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
-			} else if (option == 4) {
+			} else if (option == OPTION_4) {
 				// Return item
 				ResourceCentre.setHeader("RETURN");				
 				ResourceCentre.setHeader("ITEM TYPES");
@@ -89,7 +94,7 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
-			} else if (option == 5) {
+			} else if (option == OPTION_5) {
 				System.out.println("Bye!");
 			} else {
 				System.out.println("Invalid option");

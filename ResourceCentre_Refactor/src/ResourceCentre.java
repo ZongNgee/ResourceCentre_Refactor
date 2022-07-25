@@ -34,9 +34,7 @@ public class ResourceCentre {
 			} else if (option == OPTION_2) {
 				// Add a new item
 				ResourceCentre.setHeader("ADD");			
-				ResourceCentre.setHeader("ITEM TYPES");
-				System.out.println("1. Camcorder");
-				System.out.println("2. Chromebook");
+				itemTypeMenu();
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
@@ -61,9 +59,7 @@ public class ResourceCentre {
 			} else if (option == OPTION_3) {
 				// Loan item
 				ResourceCentre.setHeader("LOAN");			
-				ResourceCentre.setHeader("ITEM TYPES");
-				System.out.println("1. Camcorder");
-				System.out.println("2. Chromebook");
+				itemTypeMenu();
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
@@ -80,9 +76,7 @@ public class ResourceCentre {
 			} else if (option == OPTION_4) {
 				// Return item
 				ResourceCentre.setHeader("RETURN");				
-				ResourceCentre.setHeader("ITEM TYPES");
-				System.out.println("1. Camcorder");
-				System.out.println("2. Chromebook");
+				itemTypeMenu();
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 				if (itemType == 1) {
@@ -103,6 +97,12 @@ public class ResourceCentre {
 
 		}
 
+	}
+
+	private static void itemTypeMenu() {
+		ResourceCentre.setHeader("ITEM TYPES");
+		System.out.println("1. Camcorder");
+		System.out.println("2. Chromebook");
 	}
 
 	public static void menu() {
@@ -139,11 +139,15 @@ public class ResourceCentre {
 
 		for (int i = 0; i < camcorderList.size(); i++) {
 
+<<<<<<< HEAD
+			output += String.format("%-84s \n", camcorderList.get(i).toString());
+=======
 			boolean getAvailability = camcorderList.get(i).getIsAvailable();
 			output += String.format("%-10s %-30s %-10s %-10s %-20d\n", camcorderList.get(i).getAssetTag(),
 					camcorderList.get(i).getDescription(), 
 					ResourceCentre.showAvailability(getAvailability),
 					camcorderList.get(i).getDueDate(),camcorderList.get(i).getOpticalZoom());
+>>>>>>> branch 'master' of https://github.com/ZongNgee/ResourceCentre_Refactor.git
 		}
 		return output;
 	}
@@ -160,11 +164,15 @@ public class ResourceCentre {
 		// write your code here
 		for (int i = 0; i < chromebookList.size(); i++) {
 
+<<<<<<< HEAD
+			output += String.format("%-84s \n", chromebookList.get(i).toString());
+=======
 			boolean getAvailability = chromebookList.get(i).getIsAvailable();
 			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
 					chromebookList.get(i).getDescription(), 
 					ResourceCentre.showAvailability(getAvailability),
 					chromebookList.get(i).getDueDate(),chromebookList.get(i).getOs());
+>>>>>>> branch 'master' of https://github.com/ZongNgee/ResourceCentre_Refactor.git
 		}
 		return output;
 	}

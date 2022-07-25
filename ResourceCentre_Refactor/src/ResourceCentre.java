@@ -53,6 +53,7 @@ public class ResourceCentre {
 					ResourceCentre.addChromebook(chromebookList, cb);
 					System.out.println("Chromebook added");
 
+					
 				} else {
 					System.out.println("Invalid type");
 				}

@@ -3,15 +3,13 @@ import java.util.ArrayList;
 public class ResourceCentre {
 
 
-<<<<<<< HEAD
-=======
+
 	private static final int OPTION_5 = 5;
 	private static final int OPTION_4 = 4;
 	private static final int OPTION_3 = 3;
 	private static final int OPTION_2 = 2;
 	private static final int OPTION_1 = 1;
 	private static final int OPTION_QUIT = 5;
->>>>>>> branch 'master' of https://github.com/ZongNgee/ResourceCentre_Refactor
 	public static void main(String[] args) {
 
 		ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>();
@@ -169,20 +167,13 @@ public class ResourceCentre {
 		String output = "";
 		// write your code here
 		for (int i = 0; i < chromebookList.size(); i++) {
-<<<<<<< HEAD
 			output += String.format("%-84s \n",chromebookList.get(i).toString());
-=======
-
-<<<<<<< HEAD
 			output += String.format("%-84s \n", chromebookList.get(i).toString());
-=======
 			boolean getAvailability = chromebookList.get(i).getIsAvailable();
 			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
 					chromebookList.get(i).getDescription(), 
 					ResourceCentre.showAvailability(getAvailability),
 					chromebookList.get(i).getDueDate(),chromebookList.get(i).getOs());
->>>>>>> branch 'master' of https://github.com/ZongNgee/ResourceCentre_Refactor.git
->>>>>>> branch 'master' of https://github.com/ZongNgee/ResourceCentre_Refactor
 		}
 		return output;
 	}

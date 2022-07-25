@@ -3,6 +3,15 @@ import java.util.ArrayList;
 public class ResourceCentre {
 
 
+<<<<<<< HEAD
+=======
+	private static final int OPTION_5 = 5;
+	private static final int OPTION_4 = 4;
+	private static final int OPTION_3 = 3;
+	private static final int OPTION_2 = 2;
+	private static final int OPTION_1 = 1;
+	private static final int OPTION_QUIT = 5;
+>>>>>>> branch 'master' of https://github.com/ZongNgee/ResourceCentre_Refactor
 	public static void main(String[] args) {
 
 		ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>();
@@ -20,12 +29,12 @@ public class ResourceCentre {
 			ResourceCentre.menu();
 			option = Helper.readInt("Enter an option > ");
 
-			if (option == 1) {
+			if (option == OPTION_1) {
 				// View all items
 				ResourceCentre.viewAllCamcorder(camcorderList);
 				ResourceCentre.viewAllChromebook(chromebookList);
 
-			} else if (option == 2) {
+			} else if (option == OPTION_2) {
 				// Add a new item
 				ResourceCentre.setHeader("ADD");			
 				ResourceCentre.setHeader("ITEM TYPES");
@@ -46,11 +55,12 @@ public class ResourceCentre {
 					ResourceCentre.addChromebook(chromebookList, cb);
 					System.out.println("Chromebook added");
 
+					
 				} else {
 					System.out.println("Invalid type");
 				}
 
-			} else if (option == 3) {
+			} else if (option == OPTION_3) {
 				// Loan item
 				ResourceCentre.setHeader("LOAN");			
 				ResourceCentre.setHeader("ITEM TYPES");
@@ -69,7 +79,7 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
-			} else if (option == 4) {
+			} else if (option == OPTION_4) {
 				// Return item
 				ResourceCentre.setHeader("RETURN");				
 				ResourceCentre.setHeader("ITEM TYPES");
@@ -87,7 +97,7 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
-			} else if (option == 5) {
+			} else if (option == OPTION_5) {
 				System.out.println("Bye!");
 			} else {
 				System.out.println("Invalid option");
@@ -131,7 +141,19 @@ public class ResourceCentre {
 
 		for (int i = 0; i < camcorderList.size(); i++) {
 
+<<<<<<< HEAD
 			output += String.format("%-84s \n",camcorderList.get(i).toString());
+=======
+<<<<<<< HEAD
+			output += String.format("%-84s \n", camcorderList.get(i).toString());
+=======
+			boolean getAvailability = camcorderList.get(i).getIsAvailable();
+			output += String.format("%-10s %-30s %-10s %-10s %-20d\n", camcorderList.get(i).getAssetTag(),
+					camcorderList.get(i).getDescription(), 
+					ResourceCentre.showAvailability(getAvailability),
+					camcorderList.get(i).getDueDate(),camcorderList.get(i).getOpticalZoom());
+>>>>>>> branch 'master' of https://github.com/ZongNgee/ResourceCentre_Refactor.git
+>>>>>>> branch 'master' of https://github.com/ZongNgee/ResourceCentre_Refactor
 		}
 		return output;
 	}
@@ -147,7 +169,20 @@ public class ResourceCentre {
 		String output = "";
 		// write your code here
 		for (int i = 0; i < chromebookList.size(); i++) {
+<<<<<<< HEAD
 			output += String.format("%-84s \n",chromebookList.get(i).toString());
+=======
+
+<<<<<<< HEAD
+			output += String.format("%-84s \n", chromebookList.get(i).toString());
+=======
+			boolean getAvailability = chromebookList.get(i).getIsAvailable();
+			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
+					chromebookList.get(i).getDescription(), 
+					ResourceCentre.showAvailability(getAvailability),
+					chromebookList.get(i).getDueDate(),chromebookList.get(i).getOs());
+>>>>>>> branch 'master' of https://github.com/ZongNgee/ResourceCentre_Refactor.git
+>>>>>>> branch 'master' of https://github.com/ZongNgee/ResourceCentre_Refactor
 		}
 		return output;
 	}

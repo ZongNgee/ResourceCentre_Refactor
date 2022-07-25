@@ -141,8 +141,6 @@ public class ResourceCentre {
 
 			output += String.format("%-84s \n",camcorderList.get(i).toString());
 
-			output += String.format("%-84s \n", camcorderList.get(i).toString());
-
 			boolean getAvailability = camcorderList.get(i).getIsAvailable();
 			output += String.format("%-10s %-30s %-10s %-10s %-20d\n", camcorderList.get(i).getAssetTag(),
 					camcorderList.get(i).getDescription(), 
@@ -164,7 +162,6 @@ public class ResourceCentre {
 		// write your code here
 		for (int i = 0; i < chromebookList.size(); i++) {
 			output += String.format("%-84s \n",chromebookList.get(i).toString());
-			output += String.format("%-84s \n", chromebookList.get(i).toString());
 			boolean getAvailability = chromebookList.get(i).getIsAvailable();
 			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
 					chromebookList.get(i).getDescription(), 
